@@ -1,2 +1,2 @@
 # Protein_Design_Pipeline
-Scripts to direct the flow of my design pipeline
+A collection of scripts to direct the flow of my design pipeline and evaluate results.
