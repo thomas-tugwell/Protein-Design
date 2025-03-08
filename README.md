@@ -4,6 +4,11 @@ The purpose of this repository is to enhance compatibility between popular desig
 
 <img width="519" alt="image" src="https://github.com/user-attachments/assets/39f1a01a-fce5-478d-bed2-08798007799f" />
 
+To download: 
+```
+git clone https://github.com/thomas-tugwell/Protein-Design.git
+```
+
 # Usage
 --Under Construction--
 
