@@ -1,6 +1,3 @@
-# A script to dock the pore structures of two proteins
-# Created by Thomas Tugwell, 3/8/2025
-
 import copy
 import numpy as np
 from Bio import PDB
@@ -121,9 +118,9 @@ apply_rotation_translation(structure1_aligned, R_plane, t_plane)
 # 4) Generate 10 PDBs, each translating structure1_aligned along c2_normal
 #    from +20 A to -5 A
 
-n_steps = 10
+n_steps = 20
 start_offset = 20.0
-end_offset   = -5.0
+end_offset   = -20.0
 offset_values = np.linspace(start_offset, end_offset, n_steps)
 
 from Bio import PDB
