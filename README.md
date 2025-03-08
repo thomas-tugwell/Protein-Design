@@ -7,6 +7,11 @@ The purpose of this repository is to enhance compatibility between popular desig
 # Usage
 --Under Construction--
 ## Docking with space_dock.py
+Need to install Bio module:
+```
+pip install Bio
+```
+
 <img width="1069" alt="image" src="https://github.com/user-attachments/assets/ea286793-bc28-40f5-884f-7a23d226c645" />
 
 Modify these lines to match your input chains (both inputs have same chains) and select one residue from each pore to define the planes that will be aligned.
