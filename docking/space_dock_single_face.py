@@ -1,3 +1,7 @@
+# A script to dock the pore structures of two proteins
+# Not as thorough as space_dock.py but slightly faster. Only considers an arbitrary initial facial orientation, so check results carefully.
+# Created by Thomas Tugwell, 3/8/2025
+
 import copy
 import numpy as np
 from Bio import PDB
