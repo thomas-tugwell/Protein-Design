@@ -1,24 +1,28 @@
 #!/bin/bash
 
-# Gain access to rosetta on the cluster
-module load rosetta 
+# NOTE: DO NOT TRUST THE RANKINGS IMPLICITY, YOU SHOULD STILL CHECK STRUCTURES
 
-# Define output file for scores
-output_file="rosetta_scores.txt"
-echo "PDB_File Total_Score" > $output_file
+module load rosetta # load rosetta
 
-# Loop through all PDBs
-for pdb in ringplane_translation_*.pdb; do
-    echo "Scoring $pdb..."
+# Define output files
+score_file="score.sc"   # Rosetta generates this file
+sorted_output="rosetta_scores_sorted.txt"
 
-    # Run Rosetta scoring
-    score_jd2.mpi.linuxgccrelease -s "$pdb" -score:weights score12 > "${pdb%.pdb}_score.log"
+# Ensure the output file starts fresh
+echo "<U+1F52C> Running Rosetta scoring for all structures..."
+rm -f $score_file  # Remove old score.sc if it exists
 
-    # Extract the total score
-    score=$(grep "pose " "${pdb%.pdb}_score.log" | awk '{print $NF}')
+# Run Rosetta scoring on all PDBs
+score_jd2.mpi.linuxgccrelease -in:file:s ringplane_translation_*.pdb -score:weights score12 -out:file:scorefile $score_file
 
-    # Save result
-    echo "$pdb $score" >> $output_file
-done
+echo "<U+2705> Scoring complete! Now extracting and sorting scores..."
 
-echo "<U+2705> Scoring complete! "
+# Parse score.sc and extract total_score, fa_rep (clashes), and hbond_bb_sc (backbone H-bonds)
+awk '
+    BEGIN { OFS="\t"; print "PDB_File", "Total_Score", "fa_rep", "hbond_bb_sc" }
+    NR > 2 { print $NF, $2, $11, $14 }  # Extract PDB name (last col), total_score, fa_rep, hbond_bb_sc
+' $score_file | sort -k2,2n > $sorted_output
+
+echo "<U+2705> Sorting complete! Results saved in $sorted_output"
+echo "<U+1F4CA> Top 5 lowest-scoring structures:"
+head -6 $sorted_output  # Show top 5 results
