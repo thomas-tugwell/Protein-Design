@@ -16,6 +16,13 @@ Need to install Bio module:
 pip install Bio
 ```
 
+You need to edit these lines to supply your structures as separate pds.
+```
+pdb_mobile  = "3_9_chainsfrom1_noend.pdb"
+pdb_station = "pent_pore_chains_noend.pdb"
+```
+
+
 Modify these lines to match your input chains (both inputs have same chains) and select one residue from each pore to define the planes that will be aligned.
 In a future version, the code will be expanded to allow mismatched length oligomers and chain identities that are different between inputs. For now, both inputs should contain the same chains. 
 
