@@ -1,7 +1,3 @@
-# A script to dock the pore structures of two proteins
-# Generated additional "flipped" orientations in case space_dock.py fails
-# Created by Thomas Tugwell, 3/8/2025
-
 import copy
 import numpy as np
 from Bio import PDB
@@ -96,8 +92,8 @@ apply_rotation_translation(structure1_aligned, R_plane, t_plane)
 structure1_flipped = flip_structure_across_plane(structure1_aligned, c2_center, c2_normal)
 
 # Generate 10 translated PDBs for both orientations
-n_steps = 10
-offset_values = np.linspace(20.0, -5.0, n_steps)
+n_steps = 20
+offset_values = np.linspace(20.0, -20.0, n_steps)
 
 from Bio import PDB
 for i, offset in enumerate(offset_values):
