@@ -1,3 +1,6 @@
+# A script to dock the pore structures of two proteins
+# Created by Thomas Tugwell, 3/8/2025
+
 import copy
 import numpy as np
 from Bio import PDB
