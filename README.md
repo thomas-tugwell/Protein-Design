@@ -18,6 +18,7 @@ Docking symmetric oligomers to other symmetric oligomers is a challenge for the 
 
 <img width="915" alt="image" src="https://github.com/user-attachments/assets/21b16fed-8f5e-4795-9d49-aebe2fe9512c" />
 
+
 space_dock.py was created in order to simplify this task and automate a docking procedure to generate a reasonable starting complex between two symmetric oligomeric proteins. score_poses.sh was created to complement the docking script and can rank the generated complexes against each other and decompose the energy funcitons into interpretable components. 
 
 <img width="1057" alt="image" src="https://github.com/user-attachments/assets/dcbac424-c722-4036-b5f6-7b7f6bbb94ea" />
