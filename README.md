@@ -23,7 +23,9 @@ space_dock.py was created in order to simplify this task and automate a docking 
 <img width="1069" alt="image" src="https://github.com/user-attachments/assets/ea286793-bc28-40f5-884f-7a23d226c645" />
 
 The docking process aligns two circular planes by superimposing their normal vectors. These planes represent structural features of two homooligomers (ie. a symmetric ring of residues). Once aligned, one structure is systematically displaced along the normal vector relative to the other, generating an ensemble of docked poses. To ensure comprehensive sampling, the ensemble is also generated for the inverted orientation, capturing both possible facial interactions.
-<img width="952" alt="image" src="https://github.com/user-attachments/assets/5cfac072-eccc-43de-b70e-44972e406d35" />
+<img width="952" alt="image" src="https://github.com/user-attachments/assets/8fae823b-6d05-46b7-8ce8-0d4584487848" />
+
+
 
 
 
