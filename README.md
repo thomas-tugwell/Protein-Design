@@ -14,7 +14,8 @@ git clone https://github.com/thomas-tugwell/Protein-Design.git
 
 ## Docking with [space_dock.py](https://github.com/thomas-tugwell/Protein-Design/blob/main/docking/space_dock.py) and [score_poses.sh](https://github.com/thomas-tugwell/Protein-Design/blob/main/docking/score_poses.sh) 
 
-Docking symmetric oligomers to other symmetric oligomers is a challenge for the alignment tools in most visualization softwares like pymol or chimera. 
+Docking symmetric oligomers to other symmetric oligomers is a challenge for the alignment tools in most visualization softwares like pymol or chimera.
+
 <img width="915" alt="image" src="https://github.com/user-attachments/assets/21b16fed-8f5e-4795-9d49-aebe2fe9512c" />
 
 space_dock.py was created in order to simplify this task and automate a docking procedure to generate a reasonable starting complex between two symmetric oligomeric proteins. score_poses.sh was created to complement the docking script and can rank the generated complexes against each other and decompose the energy funcitons into interpretable components. 
@@ -23,9 +24,6 @@ space_dock.py was created in order to simplify this task and automate a docking 
 
 The docking process aligns two circular planes by superimposing their normal vectors. These planes represent structural features of two homooligomers (ie. a symmetric ring of residues). Once aligned, one structure is systematically displaced along the normal vector relative to the other, generating an ensemble of docked poses. To ensure comprehensive sampling, the ensemble is also generated for the inverted orientation, capturing both possible facial interactions.
 <img width="952" alt="image" src="https://github.com/user-attachments/assets/8fae823b-6d05-46b7-8ce8-0d4584487848" />
-
-
-
 
 
 Need to install Bio module:
