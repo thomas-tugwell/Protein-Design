@@ -18,7 +18,7 @@ git clone https://github.com/thomas-tugwell/Protein-Design.git
 Docking segments of noncongruent symmetric oligomers to each other is a challenge for the alignment tools in most visualization softwares like pymol or chimera. 
 <img width="915" alt="image" src="https://github.com/user-attachments/assets/21b16fed-8f5e-4795-9d49-aebe2fe9512c" />
 
-space_dock.py was created in order to simplify this task and automate a docking procedure to generate a reasonable starting complex between two symmetric oligomeric proteins. 
+space_dock.py was created in order to simplify this task and automate a docking procedure to generate a reasonable starting complex between two symmetric oligomeric proteins. score_poses.sh was created to complement the docking script and can rank the generated complexes against each other and decompose the energy funcitons into interpretable components. 
 
 <img width="1069" alt="image" src="https://github.com/user-attachments/assets/ea286793-bc28-40f5-884f-7a23d226c645" />
 
